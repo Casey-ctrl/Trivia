@@ -95,12 +95,12 @@ const quizQuestions = [
     },
     {
         category: "About Casey",
-        question: "What language is primarily used for styling web pages?",
+        question: "My Favourite Anime Character?(These are my best anime characters btw)",
         answers: [
-            {text: "Python", correct: false},
-            {text: "CSS", correct: true},
-            {text: "SQL", correct: false},
-            {text: "Swift", correct: false}
+            {text: "Hidan", correct: true},
+            {text: "Gin Ichimaru", correct: true},
+            {text: "Sasuke Uchiha", correct: false},
+            {text: "GrimJow Jaegerjaquez", correct: false}
         ]
     },
     {
