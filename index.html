@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button id="dark-toggle">🌙 Dark Mode</button>
+
+  <div class="container">
+
+    <!-- START SCREEN -->
+    <div class="screen active" id="start-screen">
+      <div class="birthday-banner">🎂 Happy Birthday, Casey! 🎉</div>
+      <div class="start-icon">🧠</div>
+      <h1>Quiz Time!</h1>
+      <p>It's my birthday... — celebrate by testing your knowledge! 20 questions across general knowledge and a special round all about the birthday kid(which happens to be me ofc)</p>
+      <div class="stat-row">
+        <div class="stat-box"><div class="num">20</div><div class="lbl">Questions</div></div>
+        <div class="stat-box"><div class="num">4</div><div class="lbl">Choices each</div></div>
+        <div class="stat-box"><div class="num">∞</div><div class="lbl">Retries</div></div>
+      </div>
+      <button id="start-btn">Start Quiz</button>
+    </div>
+
+    <!-- QUIZ SCREEN -->
+    <div class="screen" id="quiz-screen">
+      <div class="q-meta">
+        <span class="q-badge" id="q-badge">Q 1 of 20</span>
+        <span class="q-score-badge">Score: <span id="score">0</span></span>
+      </div>
+      <div class="progress-bar">
+        <div id="progress" class="progress"></div>
+      </div>
+      <div class="q-category" id="q-category">CATEGORY</div>
+      <h2 id="question-text">Question goes here</h2>
+      <div id="answers-container" class="answers-container"></div>
+      <div class="feedback-bar" id="feedback"></div>
+      <div class="quiz-info">
+        <p>Question <span id="current-question">1</span> of <span id="total-questions">20</span></p>
+      </div>
+    </div>
+
+    <!-- RESULT SCREEN -->
+    <div id="result-screen" class="screen">
+      <div class="score-ring">
+        <div class="big-num" id="final-score">0</div>
+        <div class="out-of">out of <span id="max-score">20</span></div>
+      </div>
+      <h1>Quiz Results</h1>
+      <div class="result-info">
+        <div class="result-stats">
+          <div class="rstat"><div class="rv correct-color" id="r-correct">0</div><div class="rl">Correct</div></div>
+          <div class="rstat"><div class="rv wrong-color" id="r-wrong">0</div><div class="rl">Incorrect</div></div>
+          <div class="rstat"><div class="rv" id="r-pct">0%</div><div class="rl">Accuracy</div></div>
+        </div>
+      </div>
+      <div id="result-message">Good Job</div>
+      <div class="birthday-note">🎈 🎉 You just completed Casey's birthday quiz! If you're reading this, go wish Casey a happy birthday already!🎂</div>
+      <button id="restart-btn">Try Again</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
